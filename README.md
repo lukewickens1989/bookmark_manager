@@ -2,8 +2,8 @@
 
 ### User Stories
 
-As a user,
-To read bookmarks currently available,
+As a user,  
+To read bookmarks currently available,  
 I want to be able to show a list of bookmarks.
 
 ### Model Diagrams
