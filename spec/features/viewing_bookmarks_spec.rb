@@ -1,14 +1,14 @@
-feature "Viewing bookmarks" do
+# frozen_string_literal: true
 
-  scenario "it shows bookamrks" do
+feature 'Viewing bookmarks' do
+  scenario 'it shows bookamrks' do
     visit('/bookmarks')
-    expect(page).to have_content("Bookmarks:")
+    expect(page).to have_content('Bookmarks:')
   end
 
-  scenario "it returns all bookmarks" do
+  scenario 'it returns all bookmarks' do
     bookmarks = Bookmark.all
     visit('bookmarks')
-    expect(page).to have_content(["bob"])
+    expect(page).to have_content('http://www.makersacademy.com')
   end
-  
 end

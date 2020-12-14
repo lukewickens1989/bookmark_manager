@@ -1,8 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/whelliwell1/Dropbox/projects/makers/week_4/bookmark_manager/spec/bookmark_spec.rb": {
+      "/home/luke/Makers/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -22,25 +24,26 @@
           1,
           null,
           null,
+          null
+        ]
+      },
+      "/home/luke/Makers/bookmark_manager/spec/features/testing_initial_functionality_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/Users/whelliwell1/Dropbox/projects/makers/week_4/bookmark_manager/spec/features/testing_initial_functionality_spec.rb": {
+      "/home/luke/Makers/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/whelliwell1/Dropbox/projects/makers/week_4/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": {
-        "lines": [
           1,
-          null,
           1,
           1,
           1,
@@ -50,12 +53,11 @@
           1,
           1,
           1,
-          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1607962101
+    "timestamp": 1607969101
   }
 }
