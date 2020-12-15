@@ -15,7 +15,8 @@ describe Bookmark do
 
   describe '#all' do
     it 'shows the array' do
-      # bm.bookmarks = ["bob"]
+      con = PG.connect dbname: 'bookmark_manager_test', user: 'luke'
+      con.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
       expect(Bookmark.all).to include('http://www.makersacademy.com')
     end
   end

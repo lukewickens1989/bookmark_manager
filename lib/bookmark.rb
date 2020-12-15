@@ -1,20 +1,20 @@
-# frozen_string_literal: true
-
+# #!/usr/bin/ruby
 require 'pg'
+puts ENV["RACK_ENV"] #currently in development env
 
 class Bookmark
   def initialize; end
 
   def self.all
-    bookmark_array = []
-    con = PG.connect dbname: 'bookmark_manager', user: 'luke'
+    if ENV['RACK_ENV'] = 'test'
+      con = PG.connect dbname: 'bookmark_manager_test', user: 'luke'
+    else
+      con = PG.connect dbname: 'bookmark_manager', user: 'luke'
+    end
 
     rs = con.exec 'SELECT * FROM bookmarks'
+    rs.map { |bookmark| bookmark['url'] }
 
-    rs.each do |row|
-      bookmark_array << format('%s', row['url'])
-    end
-    bookmark_array
   rescue PG::Error => e
     puts e.message
   ensure
@@ -23,27 +23,3 @@ class Bookmark
   end
 end
 
-# #!/usr/bin/ruby
-
-# require 'pg'
-
-# begin
-
-#     con = PG.connect :dbname => 'bookmark_manager', :user => 'luke'
-
-#     rs = con.exec "SELECT * FROM bookmarks"
-
-#     rs.each do |row|
-#       puts "%s %s" % [ row['id'], row['url'] ]
-#     end
-
-# rescue PG::Error => e
-
-#     puts e.message
-
-# ensure
-
-#     rs.clear if rs
-#     con.close if con
-
-# end
