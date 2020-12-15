@@ -23,6 +23,42 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/luke/Makers/bookmark_manager/spec/features/bookmark_creation_spec.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -48,6 +84,9 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -60,6 +99,6 @@
         ]
       }
     },
-    "timestamp": 1608048045
+    "timestamp": 1608056052
   }
 }

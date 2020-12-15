@@ -1,6 +1,5 @@
 # #!/usr/bin/ruby
 require 'pg'
-puts ENV["RACK_ENV"] #currently in development env
 
 class Bookmark
   def initialize; end
@@ -21,5 +20,15 @@ class Bookmark
     rs&.clear
     con&.close
   end
+
+  def self.create(url:)
+    if ENV['RACK_ENV'] = 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end
+  connection.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
+  end
+
 end
 
