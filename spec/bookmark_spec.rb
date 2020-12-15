@@ -28,5 +28,4 @@ describe Bookmark do
       expect(Bookmark.all).to include('http://www.twitter.com')
     end
   end
-
 end

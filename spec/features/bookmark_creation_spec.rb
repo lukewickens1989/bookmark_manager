@@ -1,6 +1,6 @@
+# frozen_string_literal: true
 
 feature 'Creating New Bookmarks' do
-
   scenario 'testing intial implementation' do
     visit('/bookmarks/new')
     expect(page).to have_content('Bookmark Creation')
@@ -18,6 +18,4 @@ feature 'Creating New Bookmarks' do
     click_button('submit')
     expect(page).to have_content('http://twitter.com')
   end
-
-
 end
