@@ -1,31 +1,27 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/luke/Makers/bookmark_manager/spec/bookmark_spec.rb": {
+      "/home/luke/Makers/bookmark_manager/bookmark_manager/spec/bookmark_spec.rb": {
         "lines": [
           null,
           null,
           1,
           null,
           1,
-          2,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
           1,
           1,
           1,
           1,
+          null,
+          null,
+          1,
           1,
           null,
-          null,
+          1,
+          1,
+          1,
           null,
           1,
           1,
@@ -34,25 +30,8 @@
           null,
           null,
           null,
-          null
-        ]
-      },
-      "/home/luke/Makers/bookmark_manager/spec/features/bookmark_creation_spec.rb": {
-        "lines": [
-          null,
-          1,
-          null,
           1,
           1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           1,
@@ -64,7 +43,51 @@
           null
         ]
       },
-      "/home/luke/Makers/bookmark_manager/spec/features/testing_initial_functionality_spec.rb": {
+      "/home/luke/Makers/bookmark_manager/bookmark_manager/spec/features/bookmark_creation_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/luke/Makers/bookmark_manager/bookmark_manager/spec/features/deleting_a_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/luke/Makers/bookmark_manager/bookmark_manager/spec/features/testing_initial_functionality_spec.rb": {
         "lines": [
           null,
           null,
@@ -76,7 +99,7 @@
           null
         ]
       },
-      "/home/luke/Makers/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": {
+      "/home/luke/Makers/bookmark_manager/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           null,
           null,
@@ -99,6 +122,6 @@
         ]
       }
     },
-    "timestamp": 1608056052
+    "timestamp": 1608226424
   }
 }

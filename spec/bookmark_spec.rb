@@ -3,29 +3,36 @@
 require 'bookmark'
 
 describe Bookmark do
-  let(:bm) { Bookmark.new }
 
-  it 'should be an instance of described_class' do
-    expect(bm).to be_instance_of(described_class)
-  end
-
-  # it "should be initialized with an array of bookmarks" do
-  #   expect(bm.bookmarks).to eq([])
-  # end
-
-  describe '#all' do
-    it 'shows the array' do
-      con = PG.connect dbname: 'bookmark_manager_test', user: 'luke'
-      con.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
-      p Bookmark.all
-      expect(Bookmark.all).to include('http://www.makersacademy.com')
-    end
-  end
-
-  describe '#create' do
+  describe '.create' do
     it 'creates a new bookmark' do
-      Bookmark.create(url: 'http://www.twitter.com')
-      expect(Bookmark.all).to include('http://www.twitter.com')
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+      expect(bookmark.url).to eq 'http://www.testbookmark.com'
+      expect(bookmark.title).to eq 'Test Bookmark'
     end
   end
+  describe '.all' do
+    it 'returns a list of bookmarks' do   
+      # Add the test data
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
+      Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
+      Bookmark.create(url: "http://www.google.com", title: "Google")
+   
+      bookmarks = Bookmark.all
+      expect(bookmarks.first.id).to eq bookmark.id
+      expect(bookmarks.first.title).to eq 'Makers Academy'
+      expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'
+     end
+   end
+
+   describe '.delete' do
+    it 'deletes the given bookmark' do
+      bookmark = Bookmark.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
+      p bookmark
+      Bookmark.delete(id: bookmark.id)
+      p bookmark
+      expect(Bookmark.all.length).to eq 0
+    end
+  end
+
 end

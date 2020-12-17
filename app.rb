@@ -4,7 +4,7 @@ require 'sinatra/base'
 require './lib/bookmark'
 
 class App < Sinatra::Base
-  enable :sessions
+  enable :sessions, :method_override
   set :session_secret, 'super secret'
 
   get '/' do
@@ -12,6 +12,7 @@ class App < Sinatra::Base
   end
 
   get '/bookmarks' do
+    @bookmarks = Bookmark.all
     erb(:bookmarks)
   end
 
@@ -20,7 +21,12 @@ class App < Sinatra::Base
   end
 
   post '/bookmarks' do
-    Bookmark.create(url: params[:url])
+    Bookmark.create(title: params['title'], url: params['url'])
+    redirect '/bookmarks'
+  end
+
+  delete '/bookmarks/:id' do
+    Bookmark.delete(id: params[:id])
     redirect '/bookmarks'
   end
 
